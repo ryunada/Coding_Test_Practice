@@ -5,14 +5,12 @@
 
 def solution(n):
     for i in range(0, n):
-        if i*2 <= n+1:
-            if n != i**2:
-                pass
-            else:
-                answer = 1
-                break
+        answer = 2
+        if n != i**2:
+            pass
         else:
-            answer = 2
+            answer = 1
+            break
 
     return answer
 
