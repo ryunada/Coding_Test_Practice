@@ -1,15 +1,24 @@
+# def solution(my_string):
+#     answer = list(my_string)
+#     result = []
+#     for i in answer:
+#         if i not in result:
+#             result.append(i)
+#     return ''.join(result)
+
+# Dictionary 사용
 def solution(my_string):
-    answer = list(my_string)
-    answer = set(answer)
-    return answer
+    return ''.join(dict.fromkeys(my_string))
+
 
 my_string = "people"
 answer = list(my_string)
 result = []
-for i in range(0,len(answer)):
-    for j in range(i,len(answer)):
-        result.append(answer[i])
-        if answer[i] == answer[j]:
-            continue
+for i in answer:
+    if i not in result:
+        result.append(i)
 print(result)
+
+print(answer)
+print(set(answer))
 

@@ -5,6 +5,5 @@ def solution(babbling):
         for j in len(shy):
             if shy[j] in babbling[i]:
                 babbling[i]
-                answer ++
-
+                answer += 1
     return answer
