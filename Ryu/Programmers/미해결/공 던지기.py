@@ -12,17 +12,22 @@ def solution(numbers, k):
 # numbers = [1]
 # k = 2
 numbers = [1,2,3,4,5]
-k = 2
+k = 10
 print(f'길이 :{len(numbers) // 2}')
 
-if len(numbers) == 1:
-    print(numbers[0])
-elif (len(numbers) % 2) == 0:
-    print(numbers[(k % (len(numbers) // 2 +1) - 1) * 2])
-else:
-    print(numbers[(k - 1) * 2])
+# if len(numbers) == 1:
+#     print(numbers[0])
+# elif (len(numbers) % 2) == 0:
+#     print(numbers[(k % (len(numbers) // 2 +1) - 1) * 2])
+# else:
+#     print(numbers[(k - 1) * 2])
 
-print(solution(numbers, k))
+print(((k-1)*2)//len(numbers)+1)
+# print(numbers[(k-1)*2])
+
+
+
+# print(solution(numbers, k))
 # print(numbers[(k%(len(numbers)//2)-1)*2])
 
 
