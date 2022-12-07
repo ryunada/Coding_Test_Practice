@@ -11,3 +11,7 @@ for i in my_string:
         answer += i.lower()
 
 print(answer)
+
+
+# def solution(my_string):
+#     return my_string.swapcase()
