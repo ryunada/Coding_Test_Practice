@@ -1,5 +1,5 @@
 def solution(n):
-    answer=0
+    sum=0
     for i in range(2,n+1,2):
-        answer += i
-    return answer
+        sum += i
+    return sum
