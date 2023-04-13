@@ -1,0 +1,2 @@
+print('rear')
+print('beom')
