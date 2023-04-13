@@ -5,4 +5,4 @@ def solution(hp):
     answer = (hp//general) + (hp%general)//soldier + ((hp%general)%soldier)
     return answer
 
-print(solution(9))
+print(solution(11))
