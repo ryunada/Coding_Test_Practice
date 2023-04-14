@@ -5,4 +5,4 @@ def solution(order):
             answer += 1
     return answer
 
-print(solution(3948))
+print(solution(39487))
