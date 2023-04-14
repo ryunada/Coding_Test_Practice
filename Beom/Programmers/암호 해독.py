@@ -4,4 +4,5 @@ def solution(cipher, code):
         answer += cipher[i]
     return answer
 
+
 print(solution("dfjardstddetckdaccccdegk",4))
