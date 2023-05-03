@@ -7,4 +7,4 @@ def solution(rsp):
             answer += "0"
         elif rsp[i]=="5":
             answer += "2"
-    return answer
+    return answer#
