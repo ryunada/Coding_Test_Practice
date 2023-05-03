@@ -6,3 +6,4 @@ def solution(order):
     return answer
 
 print(solution(39487))
+

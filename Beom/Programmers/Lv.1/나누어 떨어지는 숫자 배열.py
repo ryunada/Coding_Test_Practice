@@ -10,4 +10,8 @@ def solution(arr, divisor):
         return answer
 
 
+
+
+
+
 print(solution([2, 36, 1, 3],1))
