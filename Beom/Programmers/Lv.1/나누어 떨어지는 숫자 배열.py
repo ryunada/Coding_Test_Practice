@@ -13,4 +13,5 @@ def solution(arr, divisor):
 
 
 
+
 print(solution([2, 36, 1, 3],1))
