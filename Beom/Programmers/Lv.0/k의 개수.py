@@ -5,3 +5,4 @@ def solution(i, j, k):
             if int(str(n)[t]) == k:
                 answer +=1
     return answer
+

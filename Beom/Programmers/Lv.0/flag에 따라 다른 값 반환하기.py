@@ -4,5 +4,6 @@ def solution(a, b, flag):
     elif flag == 0:
         return a-b
 
+
 print(solution(-4,7,"true"))
 print(solution(-4,7,"false"))
