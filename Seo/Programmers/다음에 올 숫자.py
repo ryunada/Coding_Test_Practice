@@ -5,7 +5,6 @@ def solution(common):
         d = common[1] - common[0]
     elif common[1] // common[0] == common[2] // common[1]:
         r = common[1] // common[0]
-
     if d is None:
         answer = common[len(common) - 1] * r
     else:
