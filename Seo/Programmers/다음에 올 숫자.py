@@ -1,7 +1,6 @@
 def solution(common):
     d = None
     r = None
-
     if common[1] - common[0] == common[2] - common[1]:
         d = common[1] - common[0]
     elif common[1] // common[0] == common[2] // common[1]:
