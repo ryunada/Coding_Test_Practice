@@ -1,9 +1,8 @@
 def solution(babbling):
     answer = 0
-    words = ["aya", "ye", "woo", "ma"]
     for i in babbling:
         #print("babbling=",i)
-        for j in words:
+        for j in ["aya", "ye", "woo", "ma"]:
             #print("words=",j)
             while (j in i):
                 i = i.replace(j," ")
