@@ -12,5 +12,4 @@ def solution(babbling):
                     #print(answer)
                     break
     return answer
-
 print(solution(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"]))
