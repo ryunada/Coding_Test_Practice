@@ -33,7 +33,7 @@ def sol(arr,i,j): #위험지역을 표시하기 위한 함수
         pass
 
 def solution(board):
-    #배열추가 (-1인덱스 처리하기 위함)
+    #(n+1)*(n+1)배열 만들기 (-1인덱스 처리하기 위함)
     arr = []
     for i in board:
         i.insert(0, 2)
