@@ -78,7 +78,14 @@
 # board = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]]
 # board = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]
 # board = [[1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1]]
-board = [[0,0,0],[0,0,0],[0,0,1]]
+# board = [[0,0,0],[0,0,0],[0,0,1]]
+# board = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+# board = [[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]]
+# board = [[0,0,0,0],[0,1,1,0],[0,1,1,0],[0,0,0,0]]
+# board = [[1,0,0,1],[0,0,0,0],[0,0,0,0],[1,0,0,1]]
+# board = [1]
+# board = [[0,0],[0,0]]
+board = [[0,1,1,0],[1,0,0,1],[1,0,0,1],[0,1,1,0]]
 def solution(board):
     test = [[0] * len(board) for i in range(len(board))]
     answer = 0
@@ -98,13 +105,11 @@ def solution(board):
             for j in range(len(board)):
                 if board[i][j] == 1:
                     if (i == 0) & (j == 0): # 왼쪽 위 모서리
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i][j+1] += 1
                         test[i+1][j+1] += 1
                         test[i+1][j] += 1
                     if (i == 0) & (0 < j < len(board)-1): # 모퉁이 제외 위쪽 벽면
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i][j-1] += 1
                         test[i+1][j-1] += 1
@@ -112,13 +117,11 @@ def solution(board):
                         test[i+1][j+1] += 1
                         test[i][j+1] += 1
                     if (i == 0) & (j == len(board)-1): # 오른쪽 위 모퉁이
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i][j-1] += 1
                         test[i+1][j-1] += 1
                         test[i+1][j] += 1
                     if (0 < i < len(board)-1) & (j == 0): # 모퉁이 제외 왼쪽 벽면
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j] += 1
                         test[i-1][j+1] += 1
@@ -126,7 +129,6 @@ def solution(board):
                         test[i+1][j] += 1
                         test[i+1][j+1] += 1
                     if (0 < i < len(board)-1) & (j == len(board)-1): # 모퉁이 제외 오른쪽 벽면
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j-1] += 1
                         test[i-1][j] += 1
@@ -134,13 +136,11 @@ def solution(board):
                         test[i+1][j-1] += 1
                         test[i+1][j] += 1
                     if (i == len(board)-1) & (j == 0): # 왼쪽 아래 모퉁이
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j] += 1
                         test[i-1][j+1] += 1
                         test[i][j+1] += 1
                     if (i == len(board)-1) & (0 < j < len(board)-1): # 모퉁이 제외 아래 벽면
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j-1] += 1
                         test[i-1][j] +=1
@@ -148,13 +148,11 @@ def solution(board):
                         test[i][j-1] += 1
                         test[i][j+1] += 1
                     if (i == len(board)-1) & (j == len(board)-1): # 오른쪽 아래 모퉁이
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j-1] += 1
                         test[i-1][j] += 1
                         test[i][j-1] += 1
                     if (0 < i < len(board)-1) & (0 < j < len(board)-1): # 제외 없음
-                        print(f"i : {i} j: {j}")
                         test[i][j] += 1
                         test[i-1][j-1] += 1
                         test[i-1][j] += 1
@@ -164,7 +162,6 @@ def solution(board):
                         test[i+1][j-1] += 1
                         test[i+1][j] += 1
                         test[i+1][j+1] += 1
-
 
     for i in range(0,len(board)):
         for j in range(0, len(board)):
