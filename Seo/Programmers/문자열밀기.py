@@ -20,6 +20,5 @@ def solution(A,B):
             answer = n
             break
     return answer
-
 print(solution("hello","ohell"))
 
