@@ -10,4 +10,5 @@ print(newlist1)
 # 가까운 순위 매겨서 새로운 배열 생성
 k = min(newlist1)
 for i in range(0,len(numlist)):
-    if newlist1
+    if newlist1:
+        pass
