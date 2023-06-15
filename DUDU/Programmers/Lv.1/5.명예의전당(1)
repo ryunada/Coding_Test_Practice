@@ -1,0 +1,11 @@
+def solution(k, score):
+    kl = []
+    result = []
+    for i in score :
+        kl.append(i)                 # 인덱스의 값을 kl에 저장
+        kl = sorted(kl,reverse=True) # 내림차순 정렬
+        if len(kl) <= k :            # kl의 길이가 k보다 작거나 같으면
+            result.append(kl[-1])    # 마지막 인덱스의 값(가장 작은 값)을 result에 저장 
+        else :                       # kl의 길이가 k보다 크다면
+            result.append(kl[k-1])   # kl의 k-1번째 인덱스의 값을 result에 저장
+    return result 
