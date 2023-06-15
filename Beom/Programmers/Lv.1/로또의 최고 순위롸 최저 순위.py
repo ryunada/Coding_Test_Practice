@@ -1,18 +1,18 @@
-def lot_rank(a):
-    answer = 0
-    if a < 2:
-        answer = 6
-    elif a == 2:
-        answer = 5
-    elif a == 3:
-        answer = 4
-    elif a == 4:
-        answer = 3
-    elif a == 5:
-        answer = 2
-    elif a == 6:
-        answer = 1
-    return answer
+def lot_rank(score):
+    rank = 0
+    if score < 2:
+        rank = 6
+    elif score == 2:
+        rank = 5
+    elif score == 3:
+        rank = 4
+    elif score == 4:
+        rank = 3
+    elif score == 5:
+        rank = 2
+    elif score == 6:
+        rank = 1
+    return rank
 
 
 def solution(lottos, win_nums):
