@@ -23,7 +23,6 @@ def solution(new_id):
             continue
         three_id += two_id_l[i - 1]
 
-
     # 조건 4. 앞에 뒤에 마침표(.)이면 제거 | 조건 3에서 뒤에 마침표가 있으면 없앰
     four_id = ''
     if three_id[0] == '.':
