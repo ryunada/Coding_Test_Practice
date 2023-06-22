@@ -1,8 +1,8 @@
 # ex1
 # new_id ="...!@BaT#*..y.abcdefghijklm.."
-new_id = ''
+# new_id = ''
 # new_id = 'z-+.^.'
-
+new_id = '123_.def'
 print(f"입력한 ID : {new_id}")
 
 
@@ -17,21 +17,25 @@ def solution(new_id):
             two_id += i
 
     # 조건 3. 마침표가 2번 이상 연속된 부분을 하나의 마침표(.)로 치환
-    three_id = ''
+    three_id = two_id[0]
     two_id_l = list(two_id)
 
-    if len(two_id_l) >= 1:
+    if len(two_id_l) >= 1:     # len() = 0 는 for문을 실행하지 못함
         for i in range(1, len(two_id_l)):
-            if (two_id_l[i - 1] == '.') & (two_id_l[i] == '.'):
+            if (two_id_l[i - 1] == '.') & (two_id_l[i] == '.') : # 반복되는 경우 건너 뛰기
                 continue
-            three_id += two_id_l[i - 1]
+            three_id += two_id_l[i]
+
 
     # 조건 4. 앞에 뒤에 마침표(.)이면 제거 | 조건 3에서 뒤에 마침표가 있으면 없앰
     four_id = ''
     if len(three_id) >= 1:
         if three_id[0] == '.':
             four_id = three_id[1:]
-
+        else:
+            four_id = three_id
+        if four_id[-1] == '.':
+            four_id = four_id[:-1]
     # 조건 5. new_id가 빈 문자열이라면, new_id에 'a'를 대입
     if len(four_id) == 0:
         four_id = 'a'
@@ -43,10 +47,12 @@ def solution(new_id):
             five_id = five_id[:-1]
     else:
         five_id = four_id
-        # 조건 7.
+
+    # 조건 7.
+
     result_id = five_id
     if len(five_id) <= 2:
-        while (len(result_id) >= 3):
+        while (len(result_id) < 3):
             result_id += five_id[-1]
 
     return result_id
