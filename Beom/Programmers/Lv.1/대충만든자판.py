@@ -1,22 +1,34 @@
 def solution(keymap, targets):
-    key_map_str = ''
     result = []
-    for i in keymap:
-        key_map_str += i
-
     for i in targets:
-        score = 0
+        score = []
         for j in i:
+            idx = []
+            cnt = 0
             for k in keymap:
-                if k.find(j) == -1:
-                    pass
+                if k.find(j) != -1:
+                    idx.append(k.find(j) + 1)
                 else:
-                    click = len(k)
-                    if click > k.find(j) + 1:
-                        click = k.find(j) + 1
-                    score += click
-        result.append(score)
+                    cnt += 1
+            if cnt == len(keymap):
+                score.append(-1)
+            else:
+                score.append(min(idx))
+        if -1 in score:
+            result.append(-1)
+        else:
+            result.append(sum(score))
     return result
+
+    #             if (len(idx)!=0) & (len(idx) != len(keymap)):
+    #                 score.append(min(idx))
+    #             else:
+    #                 score.append(-1)
+
+    #         if -1 in score:
+    #             result.append(-1)
+    #         else:
+    #             result.append(sum(score))
 
 
     #         if j in key_map_str:
