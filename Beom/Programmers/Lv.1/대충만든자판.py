@@ -20,6 +20,8 @@ def solution(keymap, targets):
             result.append(sum(score))
     return result
 
+
+
     #             if (len(idx)!=0) & (len(idx) != len(keymap)):
     #                 score.append(min(idx))
     #             else:
