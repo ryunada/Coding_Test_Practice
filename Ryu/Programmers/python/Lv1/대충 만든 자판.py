@@ -10,7 +10,9 @@
 
 # ex4
 keymap, targets = ["ABCE"], ["ABDE"]
-def solution(keymap, targets):
+
+# Prototyping Version
+def solution_v1(keymap, targets):
     # keymap에 있는 알파벳이 들어갈 딕셔너리 생성
     key_dic = {}
 
@@ -37,4 +39,7 @@ def solution(keymap, targets):
                 break
         result.append(a)
     return result
-print(solution(keymap,targets))
+
+print(solution_v1(keymap,targets))
+
+# Refactoring Version
