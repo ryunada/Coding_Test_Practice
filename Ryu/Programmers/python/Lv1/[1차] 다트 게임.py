@@ -24,9 +24,12 @@ def solution(dartResult):
         elif (dart_l[i] == '1') & (dart_l[i+1] == '0'): # 숫자가 10일떄
             formula.append('+')
             formula.append('10')
-        elif dart_l[i] != '0':   # 맨 처음이 0인경우가 안되네
+        elif (dart_l[i-1] == '1') & (dart_l[i] == '0'):
+            continue
+        else:   # 맨 처음이 0인경우가 안되네
             formula.append('+')
             formula.append(dart_l[i])
+
 
 
     print(formula[1:])
