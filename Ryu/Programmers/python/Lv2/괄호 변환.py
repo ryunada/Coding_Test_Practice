@@ -1,3 +1,15 @@
-def solution(p):
-    answer = ''
-    return answer
+# ex1)
+p = "(()())()"
+
+# ex2)
+# p = ")("
+
+# ex3)
+# p = "()))((()"
+
+
+# 1. 입력이 빈
+result = []
+
+
+
