@@ -19,6 +19,7 @@ for i in range(4):
                 o_n += 1
                 p_p = p_p.replace('()','',1)
                 a = 0
+            break
         else: # p[0] == ')'인 경우 # v : 나머지
             if p_p.find('()') != -1: # 올바른 괄호 문자열이 있다면 그 전까지
                 a = 1
