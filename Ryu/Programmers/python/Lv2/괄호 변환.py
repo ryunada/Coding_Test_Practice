@@ -5,7 +5,7 @@
 # p = ")("
 
 # ex3).
-p = "()))((()"
+p = "()()))((()"
 
 result = ''
 p_p = p[:]
@@ -30,7 +30,7 @@ for i in range(4):
     if a == 0:
         result += p[:o_n * 2]
         u = p[:o_n * 2]
-        v = p[o_n*2 :]
+        v = p[o_n * 2:]
     # else:
 
     print(f"result : {result}")
