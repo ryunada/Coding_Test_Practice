@@ -4,8 +4,8 @@
 # ex2)
 # p = ")("
 
-# ex3)
-p = "()()))((()"
+# ex3).
+p = "()))((()"
 
 result = ''
 p_p = p[:]
@@ -18,14 +18,20 @@ for i in range(4):
             if p_p.find('()') == 0:
                 o_n += 1
                 p_p = p_p.replace('()','',1)
+                a = 0
         else: # p[0] == ')'인 경우 # v : 나머지
-            print(p_p)
+            if p_p.find('()') != -1: # 올바른 괄호 문자열이 있다면 그 전까지
+                a = 1
+                u = p_p[:p_p.find('()')]
+                v = p_p[p_p.find('()'):]
             break
 
-    result += p[:o_n * 2]
-    u = p[:o_n * 2]
-    v = p[o_n*2 :]
-    p_p = v[:]
+    if a == 0:
+        result += p[:o_n * 2]
+        u = p[:o_n * 2]
+        v = p[o_n*2 :]
+    # else:
+
     print(f"result : {result}")
     print(f"u : {u}")
     print(f"v : {v}")
