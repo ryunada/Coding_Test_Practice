@@ -4,6 +4,7 @@ record = ["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid
 #     answer = []
 #     return answer
 
+# V1
 def solution(record):
     result = []
     user_name = {}
@@ -21,4 +22,5 @@ def solution(record):
         answer.append(user_name[j.split('님')[0]] + '님' + j.split('님')[1])
     return answer
 
+# V2 Enter, Leave → Dic
 print(solution(record))
