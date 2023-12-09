@@ -7,8 +7,8 @@ WHERE change_date <= '2019-08-16'
 GROUP BY product_id
 ), F AS
 (
-    select P_O.product_id, P_O.new_price, P_O.change_date
-    from Products AS P_O left join P on P_O.product_id = P.product_id
+    SELECT P_O.product_id, P_O.new_price, P_O.change_date
+    FROM Products AS P_O LEFT JOIN P ON P_O.product_id = P.product_id
     WHERE P_O.change_date = P.M_CD OR P.product_id IS NULL
     GROUP BY P_O.product_id
 )
